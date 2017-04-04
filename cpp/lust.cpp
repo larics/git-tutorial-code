@@ -49,6 +49,43 @@ private:
   }
 };
 
+class CheckPrimeCommand : public LustObject {
+public:
+  virtual void handle(istringstream&& arguments) {
+    long long argument;
+
+    if (!(arguments >> argument)) {
+      cout << "checkprime: could not read integer argument." << endl;
+      return;
+    }
+
+    if (!(argument > 1)) {
+      cout << "checkprime: argument has to be > 1!" << endl;
+      return;
+    }
+
+   cout << (check_prime(argument) ? "True" : "False") << endl;
+  }
+
+  virtual void print_help() {
+    cout << " checkprime <integer>" << endl;
+    cout << "   Performs a primality test." << endl;
+  }
+
+private:
+  bool check_prime(long long argument) {
+    // I think that there is a theorem that says
+    // that we can check fewer numbers
+    long long upper_bound = argument;
+    for (long long i = 2; i < upper_bound; i++) {
+      if (argument % i == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+};
+
 class QuitCommand : public LustObject {
 public:
   virtual void handle(istringstream&& arguments) {
@@ -93,6 +130,7 @@ int main() {
   // map for storing all commands
   map<string, unique_ptr<LustObject> > commands;
   commands["fact"] = unique_ptr<LustObject>(new FactorialCommand());
+  commands["checkprime"] = unique_ptr<LustObject>(new CheckPrimeCommand());
   commands["quit"] = unique_ptr<LustObject>(new QuitCommand());
   // help command needs a pointer to the parent map in order to call each
   // command's print_help() function
