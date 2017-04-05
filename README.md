@@ -26,3 +26,5 @@ Clone this repository by running the following command:
 
 Maintainers:
     Lovro
+	Bruno Maric
+
