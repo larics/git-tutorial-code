@@ -62,10 +62,14 @@ commands["quit"] = QuitCommand()
 # command's print_help() function
 commands["help"] = HelpCommand(commands)
 
+# input from Python 3 is raw_input in Python 2
+try: input = raw_input
+except NameError: pass
+
 while True:
   # read current line and try to extract command name
   try:
-    cmd_line = raw_input(">> ")
+    cmd_line = input(">> ")
   except (EOFError):
     break
   arguments = cmd_line.split()
