@@ -24,9 +24,9 @@ class FactorialCommand(LustObject):
 
   def __calculate_factorial(self, argument):
     # Hmmm...
-    result = 0
+    result = 1
     for i in range(1, argument+1):
-      result *= i
+      result =result*i
     return result
 
 class QuitCommand(LustObject):
