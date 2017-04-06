@@ -3,7 +3,7 @@ Toy shell for git tutorial purposes
 
 Fork this repository, and then clone it by running the following command:
 
-    git clone git@github.com:<username>/git-tutorial-code
+    git clone git@github.com:kreso7/git-tutorial-code
 
 ### C++
 * Building:
@@ -27,4 +27,4 @@ Fork this repository, and then clone it by running the following command:
 
 ### Maintainers
 
-John Doe
+kreso7
