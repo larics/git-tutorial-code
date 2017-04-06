@@ -23,8 +23,8 @@ class FactorialCommand(LustObject):
     print("   Calculates the factorial of <integer>.")
 
   def __calculate_factorial(self, argument):
-    # Hmmm...
-    result = 0
+    # Hmmm
+    result = 1
     for i in range(1, argument+1):
       result *= i
     return result

@@ -15,6 +15,28 @@ public:
   virtual void print_help() = 0;
 };
 
+class SquareCommand : public LustObject{
+public:
+  virtual void handle(istringstream&& arguments){
+    int argument;
+
+    if (!(arguments >> argument)) {
+      cout << "fact: could not read integer argument." << endl;
+      return;
+    }
+    cout << calculate_square(argument) << endl;
+  }
+
+  virtual void print_help() {
+    cout << " sqr <integer>" << endl;
+    cout << "   Calculates the square of <integer>." << endl;
+  }
+private:
+  int calculate_square(int argument){
+    return argument*argument;
+  }
+};
+
 class FactorialCommand : public LustObject {
 public:
   virtual void handle(istringstream&& arguments) {
@@ -97,6 +119,7 @@ int main() {
   // help command needs a pointer to the parent map in order to call each
   // command's print_help() function
   commands["help"] = unique_ptr<LustObject>(new HelpCommand(&commands));
+  commands["sqr"] = unique_ptr<LustObject>(new SquareCommand());
 
   while(cin) {
     string cmd_line, cmd_name;
