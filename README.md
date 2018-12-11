@@ -29,4 +29,4 @@ Fork this repository, and then clone it by running the following command:
 
 
 Marin Kovac
-
+Domagoj
