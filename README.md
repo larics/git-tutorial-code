@@ -2,6 +2,7 @@
 Toy shell for git tutorial purposes
 lol slavko
 Add Maintainer
+
 Fork this repository, and then clone it by running the following command:
 
     git clone git@github.com:<username>/git-tutorial-code
