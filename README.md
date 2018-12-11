@@ -27,4 +27,6 @@ Fork this repository, and then clone it by running the following command:
 
 ### Maintainers
 
-John Doe
+
+Marin Kovac
+
