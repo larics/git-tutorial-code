@@ -29,4 +29,4 @@ Slavko rulz, Mirko drulz.
 
 ### Maintainers
 
-Slavko Slavkić
+Slavko Slavkić & Mirko
