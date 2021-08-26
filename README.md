@@ -18,6 +18,8 @@ Fork this repository, and then clone it by running the following command:
 
       ./lust
 
+Slavko rulz, Mirko drulz.
+
 ### Python
 
 * Running:
